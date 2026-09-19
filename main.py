@@ -19,4 +19,4 @@ def calculate_total(e):
     tax = subtotal * 0.12
     total = subtotal + tax
 
-    display(f"Total w/ Tax: ₱{total:.2f}", target="receipt")
+    display(f"Total with Tax: ₱{total:.2f}", target="receipt")
