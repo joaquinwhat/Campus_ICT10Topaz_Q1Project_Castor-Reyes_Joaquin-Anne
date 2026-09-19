@@ -12,14 +12,41 @@
 
 <style>
 
-    body {
-        margin-top: 3%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        background-color: #e5f0f3;
-        padding: 20px;
-        text-align: center;
-        color: #040f24;
+    .topnav {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #81a2ae;
+            overflow: hidden;
+            border-radius: 0%;
+            margin: 0%;
+        }  
+
+    .topnav a {
+            float: right;
+            display: block;
+            color: #040f24;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+    .topnav a:hover {
+            background-color: #5b8b9d;
+            color: #f2f2f2;
+        }
+
+    body{
+            background-color: #e5f0f3;
+            margin: 0%;
     }
+
+    #notnav {
+            margin-top: 0%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #e5f0f3;
+            padding: 20px;
+            text-align: center;
+            color: #040f24;
+        }
 
     div {
         background-color: #81a2ae;
@@ -40,42 +67,50 @@
 
 </style>
 
-    <a href="index.html">Receipt Generator</a>
-    <a href="sku.html">SKU Generator</a>
+
+    <div class="topnav">
+        <a href="sku.html">SKU Generator</a>
+        <a href="index.html">Receipt Generator</a>
+    </div>
+
     <br><br>
 
-<h1>📦 SKU Generator 📦</h1>
+<div id="notnav">
 
-<div>
+    <h1>📦 SKU Generator 📦</h1>
+
+    <div>
+
+        <br>
+
+        <label>Product Category:</label>
+        <input type="text" placeholder="e.g. Shoes" id="category">
+
+        <br><br>
+
+        <label>Product Name:</label>
+        <input type="text" placeholder="Puma" id="product">
+
+        <br><br>
+
+        <label>Stock Quantity:</label>
+        <input type="number" placeholder="e.g. 100" id="quantity">
+
+        <br><br>
+
+    </div>
 
     <br>
 
-    <label>Product Category:</label>
-    <input type="text" placeholder="e.g. Shoes" id="category">
+    <button py-click="generate_sku">Generate SKU</button>
 
-    <br><br>
+    <br>
 
-    <label>Product Name:</label>
-    <input type="text" placeholder="Puma" id="product">
+    <h2>Generated SKU</h2>
 
-    <br><br>
-
-    <label>Stock Quantity:</label>
-    <input type="number" placeholder="e.g. 100" id="quantity">
-
-    <br><br>
+    <div id="sku_result"></div>
 
 </div>
-
-<br>
-
-<button py-click="generate_sku">Generate SKU</button>
-
-<br>
-
-<h2>Generated SKU</h2>
-
-<div id="sku_result"></div>
 
 <script type="py" src="./sku.py"></script>
 
