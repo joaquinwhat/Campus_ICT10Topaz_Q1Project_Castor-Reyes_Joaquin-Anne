@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKU Generator</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+</head>
+
+<body>
+
+<style>
+
+    body {
+        margin-top: 3%;
+        font-family: 'Lucida Sans', sans-serif;
+        background-color: #d5ebf3;
+        padding: 20px;
+        text-align: center;
+        color: #040f24;
+    }
+
+    div {
+        background-color: #81a2ae;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    button {
+        background-color: #81a2ae;
+        color: #d5ebf3;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+</style>
+
+<a href="index.html">Receipt Generator</a>
+<a href="sku.html">SKU Generator</a>
+
+<h1>📦 SKU Generator 📦</h1>
+
+<div>
+
+    <label>Product Category:</label>
+    <input type="text" id="category">
+
+    <br><br>
+
+    <label>Product Name:</label>
+    <input type="text" id="product">
+
+    <br><br>
+
+    <label>Stock Quantity:</label>
+    <input type="number" id="quantity">
+
+    <br><br>
+
+    <button py-click="generate_sku">Generate SKU</button>
+
+</div>
+
+<br>
+
+<h2>Generated SKU</h2>
+
+<div id="sku_result"></div>
+
+<script type="py" src="./sku.py"></script>
+
+</body>
+</html>
